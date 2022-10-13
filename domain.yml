@@ -1,0 +1,213 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - praise
+  - rate
+  - learn_bank_information
+  - learn_insurance_information
+  - forget_account_password
+  - manual_service
+  - communicate_with_supervisor
+  - check_balance
+  - swearword
+  - open_new_account
+  - tell_account
+  - tell_password
+  - save_money
+  - tell_money_amount_save
+  - tell_money_amount_withdraw
+  - withdraw_money
+
+
+
+
+entities:
+  - account
+  - password
+  - money_amount_save
+  - money_amount_withdraw
+
+
+
+slots:
+
+
+  password:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: password
+
+  account:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: account
+
+  money_amount_save:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: money_amount_save
+
+  money_amount_withdraw:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: money_amount_withdraw
+
+
+
+
+
+actions:
+  - action_erase_slots
+  - action_open_new_account
+  - action_check_balance
+  - action_save_money
+  - action_withdraw_money
+
+responses:
+
+  utter_bank_information:
+    - text: "Founded in 2022, our bank can provide users with functions such as deposit, withdrawal, user name 
+    modification, password modification, balance query, information query, etc. We will wholeheartedly provide you with 
+    high-quality service!"
+
+  utter_insurance_information:
+    - text: "[INSURANCE INFORMATION]\n--------------------------------------------------------------------------------\n
+    ICBC AXA Life Chuanjiafu Life Insurance\n
+    Payment method: single payment\n
+    Insurance period: lifetime\n
+    Basic insurance amount: 50,000 USD\n\n\n
+    ICBC AXA Life Chuanxinyi Annuity\n
+    Payment method: single payment, 3/5/10/15/20 annual payment\n
+    Insurance period: lifetime\n
+    Basic insurance amount: 100,000 USD\n\n\n
+    Cherish the overseas medical treatment of specific diseases of E-Health\n
+    Payment method: annual\n
+    Insurance period: 1 year, with a guarantee of 5 years\n
+    Basic insurance amount: 6,000,000 USD\n"
+
+
+  utter_if_need_other_help:
+    - text: "Would you like to take other service?\n
+      You can say:\n
+      1) \"Open a new account.\"\n
+      2) \"Save money.\"\n
+      3) \"Withdraw money.\"\n
+      4) \"Check my balance.\""
+
+  utter_if_need_other_help_save_money:
+    - text: "Would you like to take other service?\n
+      You can say:\n
+      1) \"Open a new account.\"\n
+      2) \"Save money.\"\n
+      3) \"Withdraw money.\"\n
+      4) \"Check my balance.\""
+
+  utter_if_need_other_help_withdraw_money:
+    - text: "Would you like to take other service?\n
+      You can say:\n
+      1) \"Open a new account.\"\n
+      2) \"Save money.\"\n
+      3) \"Withdraw money.\"\n
+      4) \"Check my balance.\""
+
+
+  utter_inform_supervisor:
+    - text: "We will inform the supervisor to retrieve it, would you like to continue?"
+
+  utter_remind_receive_account_password:
+    - text: "We have fed back your appeal to the supervisor, and the account and password will be sent out within 24 hours. Please pay attention."
+
+  utter_contact_information:
+    - text: "Supervisor Tom. Tel: 13371079771. email address: 1178928211@qq.com."
+
+  utter_what_question:
+    - text: "What kind of service?"
+
+  utter_greet:
+    - text: "Hi there! May I help you?\n
+      You can say:\n
+      1) \"Open a new account.\"\n
+      2) \"Save money.\"\n
+      3) \"Withdraw money.\"\n
+      4) \"Check my balance.\""
+    - text: "Hello! what service would you need?\n
+      You can say:\n
+      1) \"Open a new account.\"\n
+      2) \"Save money.\"\n
+      3) \"Withdraw money.\"\n
+      4) \"Check my balance.\""
+
+  utter_goodbye:
+    - text: "Thank you for your patronage and welcome to visit next time!"
+    - text: "Goodbye, Wish you a happy life!"
+
+  utter_manual_service:
+    - text: "Changing to manual service..."
+
+  utter_ask_for_account:
+    - text: "Your account, please."
+
+  utter_tell_balance:
+    - text: "Your balance is {balance}."
+
+  utter_confirm:
+    - text: "OK."
+    - text: "Get it."
+    - text: "Gotta."
+
+  utter_grate:
+    - text: "Thank you!"
+    - text: "Appreciate that!"
+
+  utter_rate:
+    - text: "Would you like to rate my service(from 1 to 5)?"
+
+  utter_comfort:
+    - text: "Please don't be angry, I will try to do better!"
+
+
+  utter_ask_account_check_balance:
+    - text: "Input your account name here, please (example: Account is XXX) >>>"
+
+  utter_ask_password_check_balance:
+    - text: "Input your password here, please (example: Password is XXX) >>>"
+
+
+  utter_ask_account_open_account:
+    - text: "Input your account name here, please (example: Account is XXX) >>>"
+
+  utter_ask_password_open_account:
+    - text: "Input your password here, please (example: Password is XXX) >>>"
+
+
+  utter_ask_account_save_money:
+    - text: "Input your account name here, please (example: Account is XXX) >>>"
+
+  utter_ask_password_save_money:
+    - text: "Input your password here, please (example: Password is XXX) >>>"
+
+  utter_ask_money_amount_save_money:
+    - text: "Input your money amount here, please (example: Save amount is XXX) >>>"
+
+
+  utter_ask_account_withdraw_money:
+    - text: "Input your account name here, please (example: Account is XXX) >>>"
+
+  utter_ask_password_withdraw_money:
+    - text: "Input your password here, please (example: Password is XXX) >>>"
+
+  utter_ask_money_amount_withdraw_money:
+    - text: "Input your money amount here, please (example: Withdraw amount is XXX) >>>"
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

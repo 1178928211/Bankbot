@@ -1,0 +1,192 @@
+version: "3.1"
+
+stories:
+
+
+- story: User want to learn bank information
+  steps:
+    - intent: learn_bank_information
+    - action: utter_bank_information
+    - action: utter_if_need_other_help
+    - checkpoint: check_asked_question
+
+
+- story: User want to learn insurance information
+  steps:
+    - intent: learn_insurance_information
+    - action: utter_insurance_information
+    - action: utter_if_need_other_help
+    - checkpoint: check_asked_question
+
+
+- story: User forget the account and password, affirm
+  steps:
+    - intent: forget_account_password
+    - action: utter_inform_supervisor
+    - intent: affirm
+    - action: utter_remind_receive_account_password
+    - action: utter_if_need_other_help
+    - checkpoint: check_asked_question
+
+
+- story: User forget the account and password, deny
+  steps:
+    - intent: forget_account_password
+    - action: utter_inform_supervisor
+    - intent: deny
+    - action: utter_confirm
+    - action: utter_if_need_other_help
+    - checkpoint: check_asked_question
+
+
+- story: Handle user affirm
+  steps:
+    - checkpoint: check_asked_question
+    - intent: affirm
+    - action: utter_what_question
+
+
+- story: Handle user deny
+  steps:
+    - checkpoint: check_asked_question
+    - intent: deny
+    - action: utter_goodbye
+
+
+- story: Greet, auto
+  steps:
+    - action: utter_greet
+
+
+- story: Greet, with user
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+
+- story: Farewell, User rate
+  steps:
+    - intent: goodbye
+    - action: utter_rate
+    - intent: rate
+    - action: utter_goodbye
+
+
+- story: Farewell, User doesn't rate
+  steps:
+    - intent: goodbye
+    - action: utter_rate
+    - intent: deny
+    - action: utter_goodbye
+
+
+- story: User want manual service
+  steps:
+    - intent: manual_service
+    - action: utter_manual_service
+
+
+- story: User want to communicate with the supervisor
+  steps:
+    - intent: communicate_with_supervisor
+    - action: utter_contact_information
+    - action: utter_if_need_other_help
+    - checkpoint: check_asked_question
+
+
+- story: User praise or confirm
+  steps:
+    - or:
+      - intent: affirm
+      - intent: praise
+    - action: utter_grate
+    - action: utter_if_need_other_help
+    - checkpoint: check_asked_question
+
+
+- story: User checks balance
+  steps:
+    - intent: check_balance
+    - action: utter_ask_account_check_balance
+    - intent: tell_account
+    - slot_was_set:
+      - account: account
+    - action: utter_ask_password_check_balance
+    - intent: tell_password
+    - slot_was_set:
+      - password: password
+    - action: action_check_balance
+    - action: action_erase_slots
+    - action: utter_if_need_other_help
+    - checkpoint: check_asked_question
+
+
+- story: User uses swearwords
+  steps:
+    - intent: swearword
+    - action: utter_comfort
+    - action: utter_if_need_other_help
+    - checkpoint: check_asked_question
+
+
+- story: User wants to open a new account
+  steps:
+    - intent: open_new_account
+    - action: utter_ask_account_open_account
+    - intent: tell_account
+    - slot_was_set:
+      - account: account
+    - action: utter_ask_password_open_account
+    - intent: tell_password
+    - slot_was_set:
+      - password: password
+    - action: action_open_new_account
+    - action: action_erase_slots
+    - action: utter_if_need_other_help
+    - checkpoint: check_asked_question
+
+
+- story: User wants to save money
+  steps:
+    - intent: save_money
+    - action: utter_ask_account_save_money
+    - intent: tell_account
+    - slot_was_set:
+      - account: account
+    - action: utter_ask_password_save_money
+    - intent: tell_password
+    - slot_was_set:
+      - password: password
+    - action: utter_ask_money_amount_save_money
+    - intent: tell_money_amount_save
+    - slot_was_set:
+      - money_amount_save: money_amount_save
+    - action: action_save_money
+    - action: action_erase_slots
+    - action: utter_if_need_other_help
+    - checkpoint: check_asked_question
+
+
+- story: User wants to withdraw money
+  steps:
+    - intent: withdraw_money
+    - action: utter_ask_account_withdraw_money
+    - intent: tell_account
+    - slot_was_set:
+      - account: account
+    - action: utter_ask_password_withdraw_money
+    - intent: tell_password
+    - slot_was_set:
+      - password: password
+    - action: utter_ask_money_amount_withdraw_money
+    - intent: tell_money_amount_withdraw
+    - slot_was_set:
+      - money_amount_withdraw: money_amount_withdraw
+    - action: action_withdraw_money
+    - action: action_erase_slots
+    - action: utter_if_need_other_help
+    - checkpoint: check_asked_question
+
+
+
+

@@ -1,0 +1,54 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPep8Inspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoredErrors">
+        <list>
+          <option value="E302" />
+          <option value="E305" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="turtle.screensize" />
+          <option value="turtle.pencolor" />
+          <option value="turtle.pensize" />
+          <option value="turtle.forward" />
+          <option value="turtle.speed" />
+          <option value="turtle.backward" />
+          <option value="turtle.setup" />
+          <option value="turtle.hideturtle" />
+          <option value="turtle.left" />
+          <option value="turtle.penup" />
+          <option value="turtle.goto" />
+          <option value="turtle.pendown" />
+          <option value="turtle.write" />
+          <option value="turtle.angle" />
+          <option value="turtle.exitonclick" />
+          <option value="turtle.onclick" />
+          <option value="turtle.dot" />
+          <option value="turtle.rt" />
+          <option value="turtle.lt" />
+          <option value="turtle.circle" />
+          <option value="turtle.fd" />
+          <option value="turtle.seth" />
+          <option value="turtle.textinput" />
+          <option value="turtle.onkeypress" />
+          <option value="turtle.stamp" />
+          <option value="turtle.home" />
+          <option value="turtle.distance" />
+          <option value="turtle.onkey" />
+          <option value="turtle.listen" />
+          <option value="turtle.getpos" />
+          <option value="turtle.ycor" />
+          <option value="turtle.onrelease" />
+          <option value="turtle.undo" />
+          <option value="turtle.pos" />
+          <option value="turtle.mode" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

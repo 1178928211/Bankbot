@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-account",
+      "2": "I-account",
+      "3": "L-account",
+      "4": "U-account",
+      "5": "B-money_amount_save",
+      "6": "I-money_amount_save",
+      "7": "L-money_amount_save",
+      "8": "U-money_amount_save",
+      "9": "B-money_amount_withdraw",
+      "10": "I-money_amount_withdraw",
+      "11": "L-money_amount_withdraw",
+      "12": "U-money_amount_withdraw",
+      "13": "B-password",
+      "14": "I-password",
+      "15": "L-password",
+      "16": "U-password",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-account": 1,
+      "I-account": 2,
+      "L-account": 3,
+      "U-account": 4,
+      "B-money_amount_save": 5,
+      "I-money_amount_save": 6,
+      "L-money_amount_save": 7,
+      "U-money_amount_save": 8,
+      "B-money_amount_withdraw": 9,
+      "I-money_amount_withdraw": 10,
+      "L-money_amount_withdraw": 11,
+      "U-money_amount_withdraw": 12,
+      "B-password": 13,
+      "I-password": 14,
+      "L-password": 15,
+      "U-password": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]

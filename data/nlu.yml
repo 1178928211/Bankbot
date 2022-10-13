@@ -1,0 +1,283 @@
+version: "3.1"
+
+nlu:
+
+- intent: greet
+  examples: |
+    - hi
+    - hello
+    - what's up
+    - how do you do
+    - good morning
+    - good afternoon
+    - good evening
+    
+
+- intent: goodbye
+  examples: |
+    - cu
+    - bye
+    - quit
+    - see ya
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - exactly
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+
+- intent: praise
+  examples: |
+    - good job
+    - awesome
+    - fabulous
+    - excellent
+    - you are so helpful!
+    - nice job
+    - great
+    - thanks
+    - thank you very much!
+    - that helps a lot
+    - thank you
+    - appriciate it
+    - appriciate that
+    - how kind of you!
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no need
+    - no, thanks
+    - not really
+    
+
+- intent: rate
+  examples: |
+    - 0
+    - 0.5
+    - 1
+    - 1.5
+    - 2
+    - 2.5
+    - 3
+    - 3.5
+    - 4
+    - 4.5
+    - 5
+    - zero
+    - one
+    - two
+    - three
+    - four
+    - five
+
+
+- intent: learn_bank_information
+  examples: |
+    - bank
+    - bank info
+    - bank information
+    - talk about the bank itself
+    - introduce the bank
+    - talk about where you from
+
+
+- intent: learn_insurance_information
+  examples: |   
+    - insurance
+    - insurance info
+    - insurance service
+    - insurance information
+    - talk about the insurance
+    - what kind of insurances do you have
+    
+
+- intent: forget_account_password
+  examples: |
+    - forget password
+    - forget account
+    - forget
+    
+
+- intent: communicate_with_supervisor
+  examples: |
+    - talk to your supervisor
+    - talk to the boss
+    - talk to the executive
+    - please give me boss's contact information
+    - boss's email address
+    - boss's phone number
+
+
+- intent: manual_service
+  examples: |   
+    - manual
+    - manual service
+    - real person
+    - person
+    - no robot
+    
+
+- intent: check_balance
+  examples: |
+    - How much money is on my account?
+    - what's my balance?
+    - what's my current balance?
+    - What's left on that account?
+    - How much do I have on that account?
+    - What's the balance on that account?
+    - How much money is left on that account?
+    - what is my account balance?
+    - what's my account balance?
+    - what's my account balance?
+    - whats my account balance?
+    - so.... what's my balance?
+    - whats my current balance?
+    - What's my balance]?
+    - How much money do I have?
+    - Check balance.
+    - Balance please.
+    - My balance.
+
+
+- intent: save_money
+  examples: |
+    - I'd like to save money.
+    - Can I save some money in the bank?
+    - I want to save some money.
+    - I want to save money.
+    - Can I save some money?
+    - Can I deposit money here?
+    - I'd like to deposit money.
+    - Can I deposit money here?
+    - Save money.
+    - Deposit money.
+    - I want to deposit money here.
+    - I want to add some money in my account.
+    - I want to deposit some money in my account.
+    - I want to save some money in my account.
+    - So...save money.
+    
+
+- intent: withdraw_money
+  examples: |
+    - Withdraw.
+    - I'd like to withdraw money.
+    - Can I withdraw some money in the bank?
+    - I want to withdraw some money.
+    - I want to withdraw money.
+    - Can I withdraw some money?
+    - Can I take some money here?
+    - I'd like to take some money.
+    - Can I draw some money out here?
+    - Withdraw money.
+    - Draw some money.
+    - So...withdraw money.
+    
+
+- intent: open_new_account
+  examples: |
+    - I'd like to open a new account.
+    - How to open a new account?
+    - How can I open a new acount?
+    - Where can I open a new account?
+    - New account, please.
+    - Can you open a new account for me?
+    - I'd like to create a new account.
+    - How to create a new account?
+    - How can I create a new acount?
+    - Where can I create a new account?
+    - Can you create a new account for me?
+    - I'd like to establish a new account.
+    - How to establish a new account?
+    - How can I establish a new acount?
+    - Where can I establish a new account?
+    - Can you establish a new account for me?
+    
+
+- intent: tell_account
+  examples: |
+    - Account is [1178928211](account)
+    - Account is [pankas2020](account)
+    - Account is [Qifeng_Pan](account)
+    - Account is [PQF3](account)
+    - Account is [Tom Anderson](account)
+    - Account is [abc123](account)
+    - Account is [yjjrrb](account)
+  
+    
+
+- intent: tell_password
+  examples: |
+    - Password is [1178928211](password)
+    - Password is [pankas2020](password)
+    - Password is [Qifeng_Pan](password)
+    - Password is [132555](password)
+    - Password is [YQDF-203434!](password)
+    - Password is [PQF3](password)
+    - Password is [abc123](password)
+    - Password is [yjjrrb](password) 
+    
+
+- intent: tell_money_amount_save
+  examples: |
+    - Save amount is [100](money_amount_save)
+    - Save amount is [200](money_amount_save)
+    - Save amount is [500](money_amount_save)
+    - Save amount is [833.70](money_amount_save)
+    - Save amount is [1000](money_amount_save)
+    - Save amount is [2000](money_amount_save)
+    - Save amount is [5000](money_amount_save)
+    - Save amount is [8337.70](money_amount_save)
+    - Save amount is [10000](money_amount_save)
+    
+
+- intent: tell_money_amount_withdraw
+  examples: |
+    - Withdraw amount is [100](money_amount_withdraw)
+    - Withdraw amount is [200](money_amount_withdraw)
+    - Withdraw amount is [500](money_amount_withdraw)
+    - Withdraw amount is [833.70](money_amount_withdraw)
+    - Withdraw amount is [1000](money_amount_withdraw)
+    - Withdraw amount is [2000](money_amount_withdraw)
+    - Withdraw amount is [5000](money_amount_withdraw)
+    - Withdraw amount is [8337.70](money_amount_withdraw)
+    - Withdraw amount is [10000](money_amount_withdraw)
+    
+
+- intent: swearword
+  examples: |
+    - fuck
+    - fuck you
+    - fuck me
+    - fucking
+    - damn
+    - dammit
+    - asshole
+    - stupit robot
+    - your ass
+    - moron
+    - idoit
+    - bitch
+    - bastard
+    - garbage
+    - rubbish
+    - you suck
+    - shit
+    - jerk
+    - silly bot
